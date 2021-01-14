@@ -8,7 +8,7 @@ document.querySelectorAll("#navBtn, #cover").forEach((e) => {
 
 /* Garāks variants bez arrow function */
 
-// document.getElementById(`collapse`).addEventListener(`click`, function () {
+// document.getElementById(`navBtn`).addEventListener(`click`, function () {
 //   document.getElementById(`dropdown`).classList.toggle("hidden");
 //   document.getElementById(`cover`).classList.toggle("hidden");
 // });
