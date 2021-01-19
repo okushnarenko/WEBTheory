@@ -53,7 +53,7 @@ body {
   font-size: 16px;
 }
 
-.navbar-dropdown {
+#dropdown {
   position: fixed;
   top: 74px;
   background-color: #d4e8d5;
