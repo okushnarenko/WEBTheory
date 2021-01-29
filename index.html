@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="wrap">
     <header>
       <nav class="navbar">
         <div class="navbar-top">
@@ -59,18 +60,17 @@
     <div class="container">
       <div class="left-side-main">
         <div class="question-image">
-          <form>
-            <input type="text" placeholder="Name" />
-            <button type="submit">Iesniegt</button>
-          </form>
+          <img src="console.jpg" alt="How to print to console 'Hello World!'">
         </div>
         <div class="question-part">
-          <h1>Kādu tagu izmantosiet, lai izveidotu attēlā redzamo elementu?</h1>
+          <h1>
+            Kas jāuzraksta, lai konsolē izvadītos:
+            Hello World!
+          </h1>
         </div>
       </div>
-      <div class="right-side-main">
-        <div class="for-fun">
-          <form class="for-fun">
+      <div class="right-side-main">        
+          <form class="right-side-main-form">
             <div class="answer-inner-div-first">
               <div>
                 <input
@@ -79,7 +79,7 @@
                   name="answer"
                   value="answer"
                 />
-                <label for="answer-1">Atbilžu variants</label>
+                <label for="answer-1">log("Hello World!");</label>
               </div>
               <div>
                 <input
@@ -88,7 +88,7 @@
                   name="answer"
                   value="answer"
                 />
-                <label for="answer-2">Atbilžu variants</label>
+                <label for="answer-2">console.log("Hello World!");</label>
               </div>
               <div>
                 <input
@@ -97,7 +97,7 @@
                   name="answer"
                   value="answer"
                 />
-                <label for="answer-3">Atbilžu variants</label>
+                <label for="answer-3">console("Hello World!");</label>
               </div>
             </div>
             <div class="answer-inner-div-second">
@@ -105,9 +105,9 @@
                 Iesniegt Atbildi
               </button>
             </div>
-          </form>
-        </div>
+          </form>        
       </div>
+    </div>
     </div>
     <script src="script.js"></script>
   </body>
