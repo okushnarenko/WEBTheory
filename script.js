@@ -1,5 +1,9 @@
-navButton = document
-  .getElementById(`collapse`)
-  .addEventListener(`click`, function () {
-    document.getElementById(`collapse1`).classList.toggle("hidden");
+"use strict";
+
+document.querySelectorAll("#navBtn, #cover").forEach((e) => {
+  e.addEventListener("click", function () {
+    document.querySelectorAll("#dropdown, #cover").forEach((el) => {
+      el.classList.toggle("hidden");
+    });
   });
+});
