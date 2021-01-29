@@ -33,6 +33,13 @@ body {
   padding: 20px;
 }
 
+.navbar-center {
+  flex: 0 1 150px;
+  text-align: center;
+}
+.mobnav-right {
+  display: none;
+}
 .navbar-right,
 .nav-title,
 .nav-counter,
@@ -99,6 +106,30 @@ ul,
 .lang-link:hover {
   background-color: rgba(255, 255, 255, 0.5);
   border-left: 5px solid #34c5ce;
+}
+
+@media only screen and (max-width: 480px) {
+  /* .navbar-top {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .navbar-center {
+    min-width: 80vw;
+    text-align: center;
+  } */
+  .mobnav-right {
+    position: fixed;
+    top: 74px;
+    display: flex;
+  }
+  #dropdown {
+    width: 100%;
+  }
+  #cover,
+  .nav-counter,
+  .nav-time {
+    display: none;
+  }
 }
 
 .container {
