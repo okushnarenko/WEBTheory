@@ -112,18 +112,14 @@ ul,
 }
 
 @media only screen and (max-width: 480px) {
-  /* .navbar-top {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-  .navbar-center {
-    min-width: 80vw;
-    text-align: center;
-  } */
   .mobnav-right {
-    position: fixed;
-    top: 74px;
+    position: relative;
+    top: 6px;
     display: flex;
+    justify-content: space-evenly;
+  }
+  .mobnav-right span {
+    padding: 0 5px;
   }
   #dropdown {
     width: 100%;
@@ -139,7 +135,7 @@ ul,
   display: flex;
 }
 
-.left-side-main {  
+.left-side-main {
   width: 50%;
 }
 
@@ -170,10 +166,10 @@ ul,
 
 .answer-inner-div-first {
   height: 50%;
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;  
+  flex-direction: column;
 }
 
 .answer-inner-div-first div {
