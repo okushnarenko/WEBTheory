@@ -36,6 +36,13 @@ body {
   padding: 20px;
 }
 
+.navbar-center {
+  flex: 0 1 150px;
+  text-align: center;
+}
+.mobnav-right {
+  display: none;
+}
 .navbar-right,
 .nav-title,
 .nav-counter,
@@ -104,11 +111,31 @@ ul,
   border-left: 5px solid #34c5ce;
 }
 
+@media only screen and (max-width: 480px) {
+  .mobnav-right {
+    position: relative;
+    top: 6px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .mobnav-right span {
+    padding: 0 5px;
+  }
+  #dropdown {
+    width: 100%;
+  }
+  #cover,
+  .nav-counter,
+  .nav-time {
+    display: none;
+  }
+}
+
 .container {
   display: flex;
 }
 
-.left-side-main {  
+.left-side-main {
   width: 50%;
 }
 
@@ -139,10 +166,10 @@ ul,
 
 .answer-inner-div-first {
   height: 50%;
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;  
+  flex-direction: column;
 }
 
 .answer-inner-div-first div {
