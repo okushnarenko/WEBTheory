@@ -4,17 +4,22 @@
   font-family: "Roboto", sans-serif;
 }
 
+html,
 body {
-  height: 100%;
-  width: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0px;
   background: #e5e5e5;
   box-sizing: border-box;
 }
 
+#wrap {
+  display: grid;
+  grid-template-rows: 74px 1fr;
+  height: 100vh;
+}
+
 .navbar-top {
-  /* position: fixed; */
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -22,7 +27,7 @@ body {
   background-color: #d4e8d5;
   color: #636363;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  z-index: 10;
+  z-index: 1;
 }
 .navbar-left a {
   display: inline-flex;
@@ -51,52 +56,69 @@ body {
   font-size: 16px;
 }
 
-.navbar-dropdown {
-  position: absolute;
+#dropdown {
+  position: fixed;
   top: 74px;
   background-color: #d4e8d5;
   right: auto;
   width: 200px;
-  height: auto;
+  height: 100vh;
   filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.25));
+  z-index: 1;
 }
+#cover {
+  position: fixed;
+  top: 74px;
+  left: 200px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
 .hidden {
   display: none;
 }
 
-ul {
-  list-style-type: none;
+.lang-group {
+  display: flex;
+}
+ul,
+.lang-group {
   margin: 0;
-  padding: 10px;
+  padding: 10px 0;
+  justify-content: center;
 }
-li {
+
+.nav-link,
+.lang-link {
+  display: block;
   padding: 10px;
-}
-.nav-link {
+  border-left: 5px solid #d4e8d5;
   text-decoration: none;
   color: #636363;
 }
+.nav-link:hover,
+.lang-link:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: 5px solid #34c5ce;
+}
 
 .container {
-  width: 100%;
-  height: 100%;
   display: flex;
 }
 
-.left-side-main {
+.left-side-main {  
   width: 50%;
-  height: 100%;
 }
 
 .right-side-main {
   width: 50%;
-  height: 100%;
   background: rgb(230, 234, 235);
 }
 
 .question-image {
   height: 65%;
-  width: 100%;
   background: rgb(224, 222, 222);
   display: flex;
   justify-content: center;
@@ -105,23 +127,22 @@ li {
 
 .question-part {
   height: 35%;
-  width: 100%;
   background: rgb(173, 170, 170);
   display: flex;
   align-items: center;
   text-align: center;
 }
 
-.for-fun {
+.right-side-main-form {
   height: 100%;
 }
 
 .answer-inner-div-first {
-  display: flex;
+  height: 50%;
+  display: flex; 
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 50%;
+  flex-direction: column;  
 }
 
 .answer-inner-div-first div {
@@ -136,19 +157,15 @@ li {
 }
 
 .answer-inner-div-second {
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50%;
 }
 
 .submit-button {
   height: 50px;
   width: 200px;
-}
-
-section {
-  display: inline-block;
 }
 
 input {
