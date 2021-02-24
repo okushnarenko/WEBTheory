@@ -199,3 +199,94 @@ input {
   margin-bottom: 3px;
   margin-right: 10px;
 }
+
+/* Result page - progress ring */
+.container-2{
+  align-self: center;
+  margin: auto;
+}
+.circle, .rings h1, .rings h2, .rings p{
+  text-align: center;
+}
+.circle circle {
+right: -50px;
+}
+.percent{
+  width: 140px;
+  height: 140px;
+}
+
+circle {
+  position: relative;
+  fill: none;
+  stroke-width: 10;
+  transform: translate(10px, 10px);
+  transform-origin: top;
+  transform: rotate(-90deg);
+  stroke-dasharray: 440;
+  stroke-linecap: round;
+}
+
+circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #424242;
+}
+
+.percent circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 33) / 100);
+  stroke: greenyellow;
+  animation: percent 1.5s linear;
+  animation-delay: 1s;
+}
+
+.number {
+  position: relative;
+  bottom: 145px;
+  right: -155px;
+  color: #424242;
+}
+
+h1{
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+span {
+  font-size: 24px;
+  opacity: 0.7;
+}
+
+.percent span {
+  color: #424242;
+}
+
+@keyframes percent {
+  0% {
+    stroke-dashoffset: 0;
+    stroke-width: 0;
+  }
+} 
+
+p {
+  font-size: 40px;
+}
+
+.rings a{
+  text-decoration: none;
+  font-size: ; 24px;
+  padding: 10px;
+  color: white;
+}
+.green{
+  background-color: green;  
+  border: 2px solid green;
+  border-radius: 25px;
+}
+.blue{
+  background-color: blue;
+  border: 2px solid blue;
+  border-radius: 25px;
+}
