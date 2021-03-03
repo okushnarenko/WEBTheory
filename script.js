@@ -20,3 +20,18 @@ document
     localStorage.setItem(question, answer);
     console.log(question, answer); /* var izdzēst pēc testēšanas */
   });
+
+// (Olga) Circle Progress Bar
+const circle = document.querySelector(".progress-ring");
+const radius = circle.r.baseVal.value;
+const circumference = 2 * Math.PI * radius;
+
+circle.style.strokeDasharray = `${circumference} ${circumference}`;
+circle.style.strokeDashoffset = circumference;
+
+function setProgress(percent) {
+  const offset = circumference - (percent / 100) * circumference;
+  circle.style.strokeDashoffset = offset;
+}
+
+setProgress(33);
