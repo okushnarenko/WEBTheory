@@ -22,16 +22,20 @@ document
   });
 
 // (Olga) Circle Progress Bar
-const circle = document.querySelector(".progress-ring");
-const radius = circle.r.baseVal.value;
-const circumference = 2 * Math.PI * radius;
-
-circle.style.strokeDasharray = `${circumference} ${circumference}`;
-circle.style.strokeDashoffset = circumference;
+let circle = document.querySelector("circle");
+let circumference = 2 * Math.PI * circle.r.baseVal.value;
+circle.style.strokeDasharray = `${circumference} 1000`;
 
 function setProgress(percent) {
-  const offset = circumference - (percent / 100) * circumference;
-  circle.style.strokeDashoffset = offset;
+  circle.style.strokeDashoffset = circumference * (1 - percent / 100);
+  let pct = document.querySelector("text");
+  pct.innerHTML = percent.toFixed(0) + "%";
 }
 
-setProgress(33);
+requestAnimationFrame(draw);
+
+function draw(t) {
+  requestAnimationFrame(draw);
+  let percentage = 33;
+  setProgress((t / 100) % percentage);
+}

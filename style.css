@@ -208,70 +208,20 @@ input {
   align-items: center;
   justify-content: center;
 }
-.box {
-  height: 150px;
-  width: 150px;
-  /* background: #fff; */
-  position: relative;
-  /* border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); */
+.container-2 .circle_loader {
+  fill: none;
+  stroke: #14ff00;
+  stroke-width: 10px;
+  transform-origin: center;
+  transform: rotate(-90deg);
 }
-.box svg {
-  height: 120px;
-  width: 120px;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-90deg);
+
+.container-2 text {
+  dominant-baseline: middle;
+  text-anchor: middle;
+  font-size: 30px;
 }
-.box svg circle {
-  fill: transparent;
-  stroke: #14FF00;
-  stroke-width: 10;
-  stroke-linecap: round;
-  stroke-dasharray: 500;
-  stroke-dashoffset: 500;
-  animation: animate 8s linear;
-}
-@keyframes animate {
-  0% {
-    stroke-dashoffset: 0;
-  }
-}
-.box svg circle:nth-child(1) {
-  stroke-dashoffset: 0;
-  stroke: #777777;
-}
-.box .stop {
-  height: 110px;
-  width: 110px;
-  background: transparent;
-  border-radius: 50%;
-  border: 10px solid #007eff;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-}
-.box .progress {
-  position: absolute;
-  bottom: 60px;
-  width: 100%;
-  text-align: center;
-  font-size: 25px;
-  font-weight: 800;
-  color: #007eff;
-}
-.box .counter {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 20px;
-  font-weight: bold;
-  color: #777777;
-}
+
 .container-2 h1 {
   font-size: 50px;
 }
@@ -291,10 +241,10 @@ input {
 .green{
   background-color: green;  
   border: 2px solid green;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 .blue{
   background-color: blue;
   border: 2px solid blue;
-  border-radius: 25px;
+  border-radius: 15px;
 }
